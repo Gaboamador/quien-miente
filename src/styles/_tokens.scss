@@ -1,0 +1,201 @@
+// ==========================
+// TIPOGRAFÍA
+// ==========================
+
+$font-family-logo:
+  "Lilita One",
+  system-ui,
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  sans-serif;
+
+$font-family-display:
+  "Baloo 2",
+  system-ui,
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  sans-serif;
+
+$font-family-ui:
+  "Nunito",
+  system-ui,
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  sans-serif;
+
+// ==========================
+// PALETA GAME-LIKE
+// ==========================
+
+$color-bg-page: #10111f;
+$color-bg-page-deep: #070814;
+
+$color-bg-panel: #181b31;
+$color-bg-surface: #232845;
+$color-bg-surface-strong: #343b67;
+
+$color-text-primary: #f7f8ff;
+$color-text-secondary: #b9c0dc;
+$color-text-muted: #858eaf;
+$color-text-inverse: #090a14;
+
+$color-border: #3d4568;
+$color-border-soft: #303750;
+
+$color-accent-primary: #7c5cff;
+$color-accent-primary-strong: #a78bff;
+
+$color-accent-secondary: #20d7ff;
+$color-accent-success: #4ee58f;
+$color-accent-warning: #ffd166;
+$color-accent-danger: #ff5c7a;
+
+$color-button-bg: $color-accent-warning;
+$color-button-text: $color-text-inverse;
+
+$color-message: $color-accent-warning;
+$color-danger-border: $color-accent-danger;
+
+// ==========================
+// GRADIENTES
+// ==========================
+
+$gradient-game-bg:
+  radial-gradient(
+    circle at 50% -18%,
+    rgba($color-accent-primary, 0.32),
+    transparent 25rem
+  ),
+  radial-gradient(
+    circle at 110% 18%,
+    rgba($color-accent-secondary, 0.13),
+    transparent 24rem
+  ),
+  radial-gradient(
+    circle at -10% 90%,
+    rgba($color-accent-warning, 0.09),
+    transparent 22rem
+  ),
+  linear-gradient(
+    180deg,
+    $color-bg-surface-strong 0%,
+    $color-bg-page 42%,
+    $color-bg-page-deep 100%
+  );
+
+$gradient-glass:
+  linear-gradient(
+    180deg,
+    rgba($color-bg-surface-strong, 0.64) 0%,
+    rgba($color-bg-panel, 0.72) 100%
+  );
+
+$gradient-card:
+  radial-gradient(
+    circle at 18% 0%,
+    rgba($color-accent-secondary, 0.16),
+    transparent 16rem
+  ),
+  linear-gradient(
+    180deg,
+    rgba($color-bg-surface-strong, 0.96) 0%,
+    rgba($color-bg-panel, 0.98) 100%
+  );
+
+$gradient-card-warm:
+  radial-gradient(
+    circle at 22% 0%,
+    rgba($color-accent-warning, 0.2),
+    transparent 15rem
+  ),
+  radial-gradient(
+    circle at 100% 20%,
+    rgba($color-accent-primary, 0.16),
+    transparent 16rem
+  ),
+  linear-gradient(
+    180deg,
+    rgba($color-bg-surface-strong, 0.98) 0%,
+    rgba($color-bg-panel, 0.98) 100%
+  );
+
+$gradient-button-primary:
+  linear-gradient(
+    135deg,
+    $color-accent-warning 0%,
+    $color-accent-primary-strong 100%
+  );
+
+$gradient-button-secondary:
+  linear-gradient(
+    135deg,
+    $color-accent-secondary 0%,
+    $color-accent-primary 100%
+  );
+
+$gradient-danger:
+  linear-gradient(
+    180deg,
+    rgba($color-accent-danger, 0.18),
+    rgba($color-accent-danger, 0.08)
+  );
+
+// ==========================
+// SOMBRAS / BORDES
+// ==========================
+
+$shadow-stage:
+  0 24px 60px rgba(0, 0, 0, 0.36),
+  inset 0 1px 0 rgba($color-text-primary, 0.06);
+
+$shadow-card:
+  0 18px 44px rgba(0, 0, 0, 0.34),
+  inset 0 1px 0 rgba($color-text-primary, 0.075);
+
+$shadow-card-soft:
+  0 12px 28px rgba(0, 0, 0, 0.24),
+  inset 0 1px 0 rgba($color-text-primary, 0.055);
+
+$shadow-button:
+  0 14px 32px rgba($color-accent-primary, 0.28),
+  inset 0 1px 0 rgba($color-text-primary, 0.3);
+
+$border-glass: 1px solid rgba($color-text-primary, 0.08);
+$border-card: 1px solid rgba($color-text-primary, 0.09);
+$border-accent: 1px solid rgba($color-accent-warning, 0.42);
+
+// ==========================
+// RADIOS
+// ==========================
+
+$radius-sm: 10px;
+$radius-md: 16px;
+$radius-lg: 24px;
+$radius-xl: 32px;
+$radius-pill: 999px;
+
+// ==========================
+// ESPACIADO
+// ==========================
+
+$space-xs: 0.5rem;
+$space-sm: 0.75rem;
+$space-md: 1rem;
+$space-lg: 1.5rem;
+$space-xl: 2rem;
+$space-2xl: 3rem;
+
+// ==========================
+// LAYOUT
+// ==========================
+
+$layout-app-max: 720px;
+
+// ==========================
+// BREAKPOINTS
+// ==========================
+
+$bp-sm: 640px;

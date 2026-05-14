@@ -1,0 +1,139 @@
+@use "@/styles/tokens" as *;
+@use "@/styles/patterns" as *;
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+
+  padding: $space-md;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    radial-gradient(
+      circle at 50% 30%,
+      rgba($color-accent-primary, 0.18),
+      transparent 22rem
+    ),
+    rgba($color-bg-page-deep, 0.78);
+
+  backdrop-filter: blur(14px);
+}
+
+.dialog {
+  width: 100%;
+  max-width: 26rem;
+  padding: $space-lg;
+
+  border: $border-card;
+  border-radius: $radius-xl;
+  background: $gradient-card;
+  box-shadow:
+    0 28px 70px rgba(0, 0, 0, 0.52),
+    inset 0 1px 0 rgba($color-text-primary, 0.08);
+
+  position: relative;
+  overflow: hidden;
+}
+
+.dialog::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      circle at 20% 0%,
+      rgba($color-accent-secondary, 0.14),
+      transparent 14rem
+    );
+
+  opacity: 0.95;
+}
+
+.dialog > * {
+  position: relative;
+  z-index: 1;
+}
+
+.danger {
+  border-color: rgba($color-accent-danger, 0.42);
+  background:
+    radial-gradient(
+      circle at 20% 0%,
+      rgba($color-accent-danger, 0.18),
+      transparent 15rem
+    ),
+    linear-gradient(
+      180deg,
+      rgba($color-bg-surface-strong, 0.98) 0%,
+      rgba($color-bg-panel, 0.98) 100%
+    );
+}
+
+.kicker {
+  @extend %gameKicker;
+
+  margin-bottom: $space-sm;
+}
+
+.danger .kicker {
+  color: $color-accent-danger;
+}
+
+.title {
+  margin: 0;
+
+  font-family: $font-family-display;
+  color: $color-text-primary;
+
+  font-size: clamp(1.9rem, 9vw, 3rem);
+  line-height: 0.9;
+  letter-spacing: -0.055em;
+  text-wrap: balance;
+}
+
+.message {
+  margin: $space-md 0 0;
+
+  color: $color-text-secondary;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.actions {
+  margin-top: $space-lg;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $space-sm;
+}
+
+.cancelButton {
+  color: $color-text-primary;
+  background: rgba($color-text-primary, 0.08);
+  box-shadow: none;
+}
+
+.confirmButton {
+  @extend %gamePrimaryButton;
+}
+
+.danger .confirmButton {
+  color: $color-text-primary;
+  background: $gradient-danger;
+  border: 1px solid rgba($color-accent-danger, 0.48);
+  box-shadow:
+    0 14px 32px rgba($color-accent-danger, 0.18),
+    inset 0 1px 0 rgba($color-text-primary, 0.12);
+}
+
+@media (min-width: $bp-sm) {
+  .actions {
+    grid-template-columns: 1fr 1fr;
+  }
+}

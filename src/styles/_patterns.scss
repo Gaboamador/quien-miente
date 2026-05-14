@@ -1,0 +1,222 @@
+@use "./tokens" as *;
+
+%gameScreen {
+  width: 100%;
+  // min-height: calc(100svh - 2rem);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: $space-lg;
+}
+
+%gameScreenWithFooter {
+  // min-height: calc(100svh - 8rem);
+  padding-bottom: $space-md;
+}
+
+%gameTop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $space-xs;
+
+  text-align: center;
+
+  h2,
+  p {
+    margin: 0;
+  }
+
+  h2 {
+    font-family: $font-family-display;
+    max-width: 11ch;
+    font-size: clamp(2.25rem, 13vw, 4.5rem);
+    font-weight: 800;
+    line-height: 0.86;
+    letter-spacing: -0.075em;
+    text-wrap: balance;
+  }
+
+  p {
+    max-width: 28rem;
+
+    color: $color-text-secondary;
+    font-size: 1rem;
+    line-height: 1.45;
+  }
+
+  strong {
+    color: $color-accent-warning;
+  }
+}
+
+%gameKicker {
+  margin: 0;
+
+  color: $color-accent-secondary;
+  font-size: 0.74rem;
+  font-weight: 950;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+%gameStage {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: $space-md;
+}
+
+%gameCard {
+  width: 100%;
+  padding: 1.25rem;
+
+  position: relative;
+  overflow: hidden;
+
+  border: $border-card;
+  border-radius: $radius-xl;
+  background: $gradient-card;
+  box-shadow: $shadow-card;
+}
+
+%gameCardWarm {
+  @extend %gameCard;
+
+  border: $border-accent;
+  background: $gradient-card-warm;
+  box-shadow:
+    $shadow-card,
+    0 0 0 1px rgba($color-accent-warning, 0.12),
+    0 0 42px rgba($color-accent-warning, 0.1);
+}
+
+%gameCardLabel {
+  margin: 0 0 $space-sm;
+
+  color: $color-accent-danger;
+  font-size: 0.74rem;
+  font-weight: 950;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+%gameTitleText {
+  margin: 0;
+  font-family: $font-family-display;
+
+  color: $color-text-primary;
+  font-size: clamp(1.55rem, 8vw, 2.7rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.055em;
+  text-wrap: balance;
+}
+
+%gameQuestionText {
+  margin: 0;
+  font-family: $font-family-display;
+  
+  color: $color-text-primary;
+  font-size: clamp(1.35rem, 7vw, 2.2rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+  text-wrap: balance;
+}
+
+%gameTitleText,
+%gameQuestionText {
+  font-family: $font-family-display;
+}
+
+%gameBodyText {
+  margin: 0;
+
+  color: $color-text-secondary;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+%gameHint {
+  margin: 0;
+
+  color: rgba($color-text-primary, 0.66);
+  font-size: 0.95rem;
+  line-height: 1.45;
+  text-align: center;
+}
+
+%gameActions {
+  display: flex;
+  flex-direction: column;
+  gap: $space-sm;
+}
+
+%gamePrimaryButton {
+  min-height: 3.75rem;
+
+  border-radius: $radius-pill;
+
+  background: $gradient-button-primary;
+  box-shadow: $shadow-button;
+
+  font-size: 1.02rem;
+  font-weight: 950;
+}
+
+%gameSecondaryButton {
+  color: $color-text-primary;
+  background: $gradient-button-secondary;
+  box-shadow:
+    0 14px 32px rgba($color-accent-secondary, 0.18),
+    inset 0 1px 0 rgba($color-text-primary, 0.22);
+}
+
+%gameDangerButton {
+  color: $color-text-primary;
+  background: $gradient-danger;
+  border: 1px solid rgba($color-accent-danger, 0.42);
+  box-shadow: none;
+}
+
+%gameList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: $space-sm;
+}
+
+%gameListItem {
+  padding: $space-md;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: $space-md;
+
+  border: $border-glass;
+  border-radius: $radius-lg;
+
+  background: $gradient-glass;
+  box-shadow: $shadow-card-soft;
+}
+
+@media (min-width: $bp-sm) {
+  %gameScreen {
+    min-height: calc(100svh - 4rem);
+  }
+
+  %gameScreenWithFooter {
+    min-height: calc(100svh - 9rem);
+  }
+
+  %gameCard {
+    padding: $space-lg;
+  }
+}

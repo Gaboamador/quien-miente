@@ -12,7 +12,7 @@ export const SCREENS = {
 };
 
 const MIN_PLAYERS = 3;
-const MAX_PLAYERS = 8;
+const MAX_PLAYERS = 12;
 
 const STORAGE_KEY = "quien_miente_game_state";
 

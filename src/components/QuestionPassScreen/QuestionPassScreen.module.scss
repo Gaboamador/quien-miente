@@ -1,49 +1,39 @@
-.panel {
-  width: 100%;
-  padding: 1rem;
+@use "@/styles/tokens" as *;
+@use "@/styles/patterns" as *;
 
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+.screen {
+  @extend %gameScreen;
+  @extend %gameScreenWithFooter;
 
-  border: 1px solid #3d444d;
-  border-radius: 18px;
-  background: #141b23;
+  min-height: calc(100svh - 9rem);
 }
 
-.header {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-
-  h2,
-  p {
-    margin: 0;
-  }
-
-  p {
-    color: #aeb8c4;
-  }
-
-  strong {
-    color: #edf3fa;
-  }
+.top {
+  @extend %gameTop;
 }
 
-.box {
-  padding: 0.875rem;
-
-  border: 1px solid #3d444d;
-  border-radius: 14px;
-  background: #1a2330;
-
-  p {
-    margin: 0;
-  }
+.kicker {
+  @extend %gameKicker;
 }
 
-@media (min-width: 640px) {
-  .panel {
-    padding: 1.5rem;
-  }
+.stage {
+  @extend %gameStage;
+}
+
+.card {
+  @extend %gameCard;
+
+  text-align: center;
+}
+
+.cardLabel {
+  @extend %gameCardLabel;
+}
+
+.cardText {
+  @extend %gameTitleText;
+}
+
+button {
+  @extend %gamePrimaryButton;
 }
