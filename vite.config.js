@@ -25,8 +25,10 @@ export default defineConfig({
         short_name: "¿Quién miente?",
         description:
           "Un party game de preguntas sospechosas para jugar con amigos en un mismo dispositivo.",
+        
         theme_color: "#343b67",
         background_color: "#070814",
+        
         display: "fullscreen",
         orientation: "portrait",
         start_url: "/",

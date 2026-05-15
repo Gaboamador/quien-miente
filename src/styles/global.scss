@@ -6,9 +6,8 @@
 
 html {
   color-scheme: dark;
-  /**/
   min-height: 100%;
-  background: $color-bg-page-deep;
+  background: $gradient-game-bg;
 }
 
 body {
@@ -19,8 +18,12 @@ body {
   font-family: $font-family-ui;
 
   color: $color-text-primary;
-  // background: $color-bg-page;
   background: $gradient-game-bg;
+}
+
+html,
+body {
+  overscroll-behavior: none;
 }
 
 #root {
@@ -32,6 +35,13 @@ button,
 input,
 select {
   font-family: $font-family-ui;
+}
+
+button,
+input,
+select,
+textarea {
+  touch-action: manipulation;
 }
 
 button {
