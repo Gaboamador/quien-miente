@@ -18,7 +18,7 @@ export function FakeRevealScreen({ game }) {
         </article>
 
         <article className={styles.fakeCard}>
-          <p className={styles.cardLabel}>Pregunta falsa</p>
+          <p className={`${styles.cardLabel} ${styles.danger}`}>Pregunta falsa</p>
           <p className={styles.questionText}>
             {game.round?.questionPair?.fake}
           </p>

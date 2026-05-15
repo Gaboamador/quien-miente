@@ -28,6 +28,10 @@
 
 .cardLabel {
   @extend %gameCardLabel;
+
+  &.danger {
+    color: $color-accent-danger;
+  }
 }
 
 .cardText {

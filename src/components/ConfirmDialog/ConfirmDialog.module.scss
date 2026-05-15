@@ -30,7 +30,7 @@
 
   border: $border-card;
   border-radius: $radius-xl;
-  background: $gradient-card;
+  background: $background-card;
   box-shadow:
     0 28px 70px rgba(0, 0, 0, 0.52),
     inset 0 1px 0 rgba($color-text-primary, 0.08);
@@ -125,7 +125,7 @@
 
 .danger .confirmButton {
   color: $color-text-primary;
-  background: $gradient-danger;
+  background: $background-danger;
   border: 1px solid rgba($color-accent-danger, 0.48);
   box-shadow:
     0 14px 32px rgba($color-accent-danger, 0.18),

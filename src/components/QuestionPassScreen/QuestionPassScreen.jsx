@@ -11,7 +11,7 @@ export function QuestionPassScreen({ game }) {
 
       <div className={styles.stage}>
         <article className={styles.card}>
-          <p className={styles.cardLabel}>No mires si no sos vos</p>
+          <p className={`${styles.cardLabel} ${styles.danger}`}>No mires si no sos vos</p>
           <p className={styles.cardText}>
             Cuando estés listo, tocá el botón para ver tu pregunta privada.
           </p>

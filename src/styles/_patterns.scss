@@ -78,7 +78,7 @@
 
   border: $border-card;
   border-radius: $radius-xl;
-  background: $gradient-card;
+  background: $background-card;
   box-shadow: $shadow-card;
 }
 
@@ -86,7 +86,7 @@
   @extend %gameCard;
 
   border: $border-accent;
-  background: $gradient-card-warm;
+  background: $background-card-warm;
   box-shadow:
     $shadow-card,
     0 0 0 1px rgba($color-accent-warning, 0.12),
@@ -96,7 +96,7 @@
 %gameCardLabel {
   margin: 0 0 $space-sm;
 
-  color: $color-accent-danger;
+  color: $color-message;
   font-size: 0.74rem;
   font-weight: 950;
   letter-spacing: 0.16em;
@@ -160,7 +160,7 @@
 
   border-radius: $radius-pill;
 
-  background: $gradient-button-primary;
+  background: $background-button-primary;
   box-shadow: $shadow-button;
 
   font-size: 1.02rem;
@@ -169,15 +169,32 @@
 
 %gameSecondaryButton {
   color: $color-text-primary;
-  background: $gradient-button-secondary;
+  background: $background-button-secondary;
   box-shadow:
     0 14px 32px rgba($color-accent-secondary, 0.18),
     inset 0 1px 0 rgba($color-text-primary, 0.22);
 }
 
+%gameCompactButton {
+  min-height: 3.25rem;
+  padding: 0 $space-md;
+
+  border-radius: $radius-pill;
+  
+  color: $color-text-primary;
+  background: $background-button-compact;
+  border: $border-glass;
+  box-shadow:
+    inset 0 1px 0 rgba($color-accent-secondary, 0.08),
+    0 10px 22px rgba($color-text-primary, 0.22);
+
+  font-size: 0.96rem;
+  font-weight: 900;
+}
+
 %gameDangerButton {
   color: $color-text-primary;
-  background: $gradient-danger;
+  background: $background-danger;
   border: 1px solid rgba($color-accent-danger, 0.42);
   box-shadow: none;
 }
@@ -203,7 +220,7 @@
   border: $border-glass;
   border-radius: $radius-lg;
 
-  background: $gradient-glass;
+  background: $background-glass;
   box-shadow: $shadow-card-soft;
 }
 

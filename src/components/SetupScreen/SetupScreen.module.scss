@@ -43,7 +43,7 @@
   }
 
   button {
-    @extend %gamePrimaryButton;
+    @extend %gameCompactButton;
   }
 }
 
@@ -112,10 +112,10 @@
 
 .actions {
   @extend %gameActions;
+}
 
-  button:first-child {
-    @extend %gamePrimaryButton;
-  }
+.startButton {
+  @extend %gamePrimaryButton;
 }
 
 .dangerButton {

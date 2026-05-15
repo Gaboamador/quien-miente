@@ -30,28 +30,50 @@ $font-family-ui:
 // PALETA GAME-LIKE
 // ==========================
 
-$color-bg-page: #10111f;
-$color-bg-page-deep: #070814;
+// $color-bg-page: #10111f;
+// $color-bg-page-deep: #070814;
 
-$color-bg-panel: #181b31;
-$color-bg-surface: #232845;
-$color-bg-surface-strong: #343b67;
+// $color-bg-panel: #181b31;
+// $color-bg-surface: #232845;
+// $color-bg-surface-strong: #343b67;
 
-$color-text-primary: #f7f8ff;
-$color-text-secondary: #b9c0dc;
-$color-text-muted: #858eaf;
-$color-text-inverse: #090a14;
+// $color-text-primary: #f7f8ff;
+// $color-text-secondary: #b9c0dc;
+// $color-text-muted: #858eaf;
+// $color-text-inverse: #090a14;
 
-$color-border: #3d4568;
-$color-border-soft: #303750;
+// $color-border: #3d4568;
+// $color-border-soft: #303750;
 
-$color-accent-primary: #7c5cff;
-$color-accent-primary-strong: #a78bff;
+// $color-accent-primary: #7c5cff;
+// $color-accent-primary-strong: #a78bff;
 
-$color-accent-secondary: #20d7ff;
-$color-accent-success: #4ee58f;
-$color-accent-warning: #ffd166;
-$color-accent-danger: #ff5c7a;
+// $color-accent-secondary: #20d7ff;
+// $color-accent-success: #4ee58f;
+// $color-accent-warning: #ffd166;
+// $color-accent-danger: #ff5c7a;
+$color-bg-page: #0d1117;
+$color-bg-page-deep: #070a0f;
+
+$color-bg-panel: #151b24;
+$color-bg-surface: #1c2430;
+$color-bg-surface-strong: #2a3545;
+
+$color-text-primary: #f2f5f8;
+$color-text-secondary: #b7c0cc;
+$color-text-muted: #7f8a99;
+$color-text-inverse: #070a0f;
+
+$color-border: #354252;
+$color-border-soft: #26313e;
+
+$color-accent-primary: #d88c4a;
+$color-accent-primary-strong: #f0a35c;
+
+$color-accent-secondary: #6fa8dc;
+$color-accent-success: #63c58a;
+$color-accent-warning: #e0b84f;
+$color-accent-danger: #d95f6a;
 
 $color-button-bg: $color-accent-warning;
 $color-button-text: $color-text-inverse;
@@ -60,88 +82,47 @@ $color-message: $color-accent-warning;
 $color-danger-border: $color-accent-danger;
 
 // ==========================
-// GRADIENTES
+// BACKGROUNDS
 // ==========================
 
-$gradient-game-bg:
+$background-game:
   radial-gradient(
     circle at 50% -18%,
-    rgba($color-accent-primary, 0.32),
+    rgba($color-accent-primary, 0.18),
     transparent 25rem
   ),
   radial-gradient(
     circle at 110% 18%,
-    rgba($color-accent-secondary, 0.13),
+    rgba($color-accent-secondary, 0.08),
     transparent 24rem
-  ),
-  radial-gradient(
-    circle at -10% 90%,
-    rgba($color-accent-warning, 0.09),
-    transparent 22rem
   ),
   linear-gradient(
     180deg,
-    $color-bg-surface-strong 0%,
-    $color-bg-page 42%,
+    $color-bg-page 0%,
+    $color-bg-page 56%,
     $color-bg-page-deep 100%
   );
 
-$gradient-glass:
-  linear-gradient(
-    180deg,
-    rgba($color-bg-surface-strong, 0.64) 0%,
-    rgba($color-bg-panel, 0.72) 100%
-  );
+$background-glass:
+  rgba($color-bg-panel, 0.74);
 
-$gradient-card:
-  radial-gradient(
-    circle at 18% 0%,
-    rgba($color-accent-secondary, 0.16),
-    transparent 16rem
-  ),
-  linear-gradient(
-    180deg,
-    rgba($color-bg-surface-strong, 0.96) 0%,
-    rgba($color-bg-panel, 0.98) 100%
-  );
+$background-card:
+  rgba($color-bg-panel, 0.96);
 
-$gradient-card-warm:
-  radial-gradient(
-    circle at 22% 0%,
-    rgba($color-accent-warning, 0.2),
-    transparent 15rem
-  ),
-  radial-gradient(
-    circle at 100% 20%,
-    rgba($color-accent-primary, 0.16),
-    transparent 16rem
-  ),
-  linear-gradient(
-    180deg,
-    rgba($color-bg-surface-strong, 0.98) 0%,
-    rgba($color-bg-panel, 0.98) 100%
-  );
+$background-card-warm:
+  rgba($color-bg-surface, 0.96);
 
-$gradient-button-primary:
-  linear-gradient(
-    135deg,
-    $color-accent-warning 0%,
-    $color-accent-primary-strong 100%
-  );
+$background-button-primary:
+  $color-accent-primary;
 
-$gradient-button-secondary:
-  linear-gradient(
-    135deg,
-    $color-accent-secondary 0%,
-    $color-accent-primary 100%
-  );
+$background-button-secondary:
+  $color-bg-surface-strong;
 
-$gradient-danger:
-  linear-gradient(
-    180deg,
-    rgba($color-accent-danger, 0.18),
-    rgba($color-accent-danger, 0.08)
-  );
+$background-button-compact:
+  rgba($color-bg-surface-strong, 0.86);
+
+$background-danger:
+  rgba($color-accent-danger, 0.12);
 
 // ==========================
 // SOMBRAS / BORDES
@@ -160,8 +141,8 @@ $shadow-card-soft:
   inset 0 1px 0 rgba($color-text-primary, 0.055);
 
 $shadow-button:
-  0 14px 32px rgba($color-accent-primary, 0.28),
-  inset 0 1px 0 rgba($color-text-primary, 0.3);
+  0 10px 24px rgba(0, 0, 0, 0.28),
+  inset 0 1px 0 rgba($color-text-primary, 0.18);
 
 $border-glass: 1px solid rgba($color-text-primary, 0.08);
 $border-card: 1px solid rgba($color-text-primary, 0.09);

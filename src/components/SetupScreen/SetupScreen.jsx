@@ -91,6 +91,7 @@ export function SetupScreen({ game }) {
         <div className={styles.actions}>
           <button
             type="button"
+            className={styles.startButton}
             onClick={handleStartRound}
             disabled={!game.canStartRound}
           >
