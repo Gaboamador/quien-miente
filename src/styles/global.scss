@@ -6,6 +6,9 @@
 
 html {
   color-scheme: dark;
+  /**/
+  min-height: 100%;
+  background: $color-bg-page-deep;
 }
 
 body {
@@ -16,7 +19,13 @@ body {
   font-family: $font-family-ui;
 
   color: $color-text-primary;
-  background: $color-bg-page;
+  // background: $color-bg-page;
+  background: $gradient-game-bg;
+}
+
+#root {
+  min-height: 100svh;
+  background: $gradient-game-bg;
 }
 
 button,
