@@ -22,12 +22,12 @@ export default defineConfig({
 
       manifest: {
         name: "¿Quién miente?",
-        short_name: "Quién miente",
+        short_name: "¿Quién miente?",
         description:
-          "Juego local offline para descubrir quién recibió la pregunta diferente.",
-        theme_color: "#0b1016",
-        background_color: "#0b1016",
-        display: "standalone",
+          "Un party game de preguntas sospechosas para jugar con amigos en un mismo dispositivo.",
+        theme_color: "#343b67",
+        background_color: "#070814",
+        display: "fullscreen",
         orientation: "portrait",
         start_url: "/",
         scope: "/",
