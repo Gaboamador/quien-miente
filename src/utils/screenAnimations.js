@@ -61,47 +61,42 @@ const screenAnimations = {
 
   questionReveal: {
     initial: {
-        opacity: 0,
-        y: 18,
-        scale: 0.82,
-        rotateX: 10,
-        filter: "blur(16px)",
-        clipPath: "inset(42% 12% 42% 12% round 28px)",
+      opacity: 0,
+      y: 26,
+      scale: 0.94,
+      filter: "blur(14px)",
     },
     animate: {
-        opacity: 1,
-        y: 0,
-        scale: [0.82, 1.025, 1],
-        rotateX: 0,
-        filter: "blur(0px)",
-        clipPath: "inset(0% 0% 0% 0% round 0px)",
+      opacity: 1,
+      y: [26, -4, 0],
+      scale: [0.94, 1.018, 1],
+      filter: "blur(0px)",
     },
     exit: {
-        opacity: 0,
-        y: -8,
-        scale: 0.9,
-        rotateX: -9,
-        filter: "blur(12px)",
-        clipPath: "inset(12% 8% 12% 8% round 24px)",
+      opacity: 0,
+      y: -10,
+      scale: 0.985,
+      filter: "blur(6px)",
     },
     transition: {
-        duration: 0.5,
-        ease: [0.16, 1, 0.3, 1],
-        scale: {
-        duration: 0.5,
+      duration: 0.44,
+      ease: [0.16, 1, 0.3, 1],
+      y: {
+        duration: 0.44,
         times: [0, 0.72, 1],
         ease: [0.16, 1, 0.3, 1],
-        },
-        clipPath: {
-        duration: 0.46,
+      },
+      scale: {
+        duration: 0.44,
+        times: [0, 0.72, 1],
         ease: [0.16, 1, 0.3, 1],
-        },
-        filter: {
-        duration: 0.34,
+      },
+      filter: {
+        duration: 0.28,
         ease: "easeOut",
-        },
+      },
     },
-    },
+  },
 
   responsesReveal: {
     initial: {
