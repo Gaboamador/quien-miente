@@ -76,11 +76,13 @@ export function SetupScreen({ game }) {
             <strong>
               {game.canStartRound
                 ? "La mesa está lista"
-                : `Faltan ${missingPlayers} jugador${missingPlayers === 1 ? "" : "es"}`}
+                : `${missingPlayers === 1 ? "Falta" : "Faltan"} ${missingPlayers} jugador${
+                  missingPlayers === 1 ? "" : "es"
+              }`}
             </strong>
             <p>
               {game.canStartRound
-                ? "Cuando quieran, pueden empezar la primera ronda."
+                ? "Todo listo. A jugar!"
                 : "Agregá más jugadores para habilitar la ronda."}
             </p>
           </div>
